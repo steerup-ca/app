@@ -10,14 +10,14 @@ Flutter SteerUp.ca app.
 git clone https://github.com/steerup-ca/app
 ```
 
-2. Install Visual Studio Code
+2. Install Visual Studio Code (Ubuntu 22.04)
 ```
 sudo snap install --classic code
 ```
 
 3. [Install flutter](https://docs.flutter.dev/get-started/install)
 
-4. Install docker (Ubuntu 20.04)
+4. Install docker (Ubuntu 22.04)
 ```
 sudo snap install docker
 ```
