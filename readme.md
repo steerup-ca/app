@@ -39,11 +39,11 @@ sudo docker compose up --build --detach
 ```
 
 ## Run
-1. Start serverpod
+1. Start serverpod (first cmd)
 ```
 dart bin/main.dart --apply-migrations
 ```
-2. Build and Launch the app
+2. Build and Launch the app (second cmd)
 ```
 cd ..
 flutter run
