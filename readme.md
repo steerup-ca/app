@@ -62,3 +62,7 @@ Stop docker serverpod containers
 sudo docker stop app_server-redis-1
 sudo docker stop app_server-postgres-1
 ```
+or
+```
+sudo docker compose stop
+```
