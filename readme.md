@@ -26,7 +26,7 @@ sudo snap install docker
 
 6. [Create virtual Android device using Android Studio](https://developer.android.com/studio/run/managing-avds)
 
-7. [Select virtual device in VSCode] (https://docs.flutter.dev/tools/vs-code#selecting-a-target-device)
+7. [Select virtual device in VSCode](https://docs.flutter.dev/tools/vs-code#selecting-a-target-device)
 
 8. [Install serverpod](https://docs.serverpod.dev/)
 
