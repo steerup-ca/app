@@ -22,9 +22,9 @@ sudo snap install --classic code
 sudo snap install docker
 ```
 
-5. [Android Studio](https://developer.android.com/studio)
+5. [Install Android Studio](https://developer.android.com/studio)
 
-6. [Create virtual Android device](https://developer.android.com/studio/run/managing-avds)
+6. [Create virtual Android device using Android Studio](https://developer.android.com/studio/run/managing-avds)
 
 7. [Select virtual device in VSCode] (https://docs.flutter.dev/tools/vs-code#selecting-a-target-device)
 
