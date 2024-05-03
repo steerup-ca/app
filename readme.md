@@ -31,38 +31,16 @@ sudo snap install docker
 8. [Install serverpod](https://docs.serverpod.dev/)
 
 
-## Build
+## Run Backend
 
 ```
 cd app_server
-sudo docker compose up --build --detach
+sudo ./start
+sudo ./stop
 ```
 
-## Run
-1. Start serverpod (first cmd)
+## Serverpod Migration
 ```
-dart bin/main.dart --apply-migrations
-```
-2. Build and Launch the app (second cmd)
-```
-cd ..
-flutter run
-```
-
-
-## Docker basics
-
-See docker currently running containers
-```
-docker ps
-```
-
-Stop docker serverpod containers
-```
-sudo docker stop app_server-redis-1
-sudo docker stop app_server-postgres-1
-```
-or
-```
-sudo docker compose stop
+cd app_server
+./update
 ```
