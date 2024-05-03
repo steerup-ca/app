@@ -35,8 +35,13 @@ sudo snap install docker
 
 ```
 cd app_server
-sudo ./start
-sudo ./stop
+sudo ./start.sh
+sudo ./stop.sh
+```
+
+## Serverpod Generation
+```
+./generate.sh
 ```
 
 ## Serverpod Migration
