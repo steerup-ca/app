@@ -1,0 +1,1 @@
+serverpod generate --watch
