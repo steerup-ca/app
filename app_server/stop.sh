@@ -1,0 +1,1 @@
+docker stop $(sudo docker container ls -q)

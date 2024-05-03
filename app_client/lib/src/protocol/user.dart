@@ -8,98 +8,64 @@
 // ignore_for_file: type_literal_in_constant_pattern
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:serverpod/serverpod.dart' as _i1;
-import 'protocol.dart' as _i2;
+import 'package:serverpod_client/serverpod_client.dart' as _i1;
 
-abstract class Example extends _i1.SerializableEntity {
-  Example._({
-    required this.user,
+abstract class User extends _i1.SerializableEntity {
+  User._({
     required this.name,
     required this.email,
-    required this.data,
   });
 
-  factory Example({
-    required _i2.User user,
+  factory User({
     required String name,
     required String email,
-    required int data,
-  }) = _ExampleImpl;
+  }) = _UserImpl;
 
-  factory Example.fromJson(
+  factory User.fromJson(
     Map<String, dynamic> jsonSerialization,
     _i1.SerializationManager serializationManager,
   ) {
-    return Example(
-      user:
-          serializationManager.deserialize<_i2.User>(jsonSerialization['user']),
+    return User(
       name: serializationManager.deserialize<String>(jsonSerialization['name']),
       email:
           serializationManager.deserialize<String>(jsonSerialization['email']),
-      data: serializationManager.deserialize<int>(jsonSerialization['data']),
     );
   }
-
-  _i2.User user;
 
   String name;
 
   String email;
 
-  int data;
-
-  Example copyWith({
-    _i2.User? user,
+  User copyWith({
     String? name,
     String? email,
-    int? data,
   });
   @override
   Map<String, dynamic> toJson() {
     return {
-      'user': user.toJson(),
       'name': name,
       'email': email,
-      'data': data,
-    };
-  }
-
-  @override
-  Map<String, dynamic> allToJson() {
-    return {
-      'user': user.allToJson(),
-      'name': name,
-      'email': email,
-      'data': data,
     };
   }
 }
 
-class _ExampleImpl extends Example {
-  _ExampleImpl({
-    required _i2.User user,
+class _UserImpl extends User {
+  _UserImpl({
     required String name,
     required String email,
-    required int data,
   }) : super._(
-          user: user,
           name: name,
           email: email,
-          data: data,
         );
 
   @override
-  Example copyWith({
-    _i2.User? user,
+  User copyWith({
     String? name,
     String? email,
-    int? data,
   }) {
-    return Example(
-      user: user ?? this.user.copyWith(),
+    return User(
       name: name ?? this.name,
       email: email ?? this.email,
-      data: data ?? this.data,
     );
   }
 }

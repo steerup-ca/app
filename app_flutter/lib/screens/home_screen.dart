@@ -1,3 +1,4 @@
+import 'package:app_flutter/main.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -6,7 +7,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return 
-    DefaultTabController(length: 2, child: 
+    DefaultTabController(length: 3, child: 
     Scaffold(
       appBar: AppBar(
         title : Image.asset('assets/images/logo.png', height: 50, width: 50),
@@ -16,10 +17,19 @@ class HomeScreen extends StatelessWidget {
             tabs: [
               Tab(text: 'Tab1'),
               Tab(text: 'Tab2'),
-              Tab(text: 'Tab3')
+              Tab(text: 'Tab3'),
             ]))
       ),
-      body :Container(),
+      body: FutureBuilder<String>(
+            future: client.example.hello('Danny'),
+            builder: (BuildContext context, AsyncSnapshot<String> snapshot) 
+            { 
+              if (snapshot.data == null) {
+                return CircularProgressIndicator();
+              }
+              return Text(snapshot.data!); 
+            }
+          ),
     ));
   }
 }
