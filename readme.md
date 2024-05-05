@@ -60,6 +60,12 @@ open -a Simulator
 flutter doctor
 ```
 
+15. Make sure passwords.yaml is created with the following in app_server/config with the db password found in app_server/docker-compose.yaml
+````
+development:
+  database: ''
+```
+
 ## Run Backend
 
 ```
